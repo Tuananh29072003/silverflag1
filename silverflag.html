@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cờ Bạc Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #image-container {
+            margin-top: 20px;
+        }
+        img.header {
+
+            width: 700px;
+            margin: 10px;
+        }
+        img {
+            width: 150px;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img class="header" src="C:\Users\admin\Downloads\baucuatomca.jpg" alt="">
+    </header>
+    <button onclick="generateImages()">Xóc</button>
+    <div id="image-container"></div>
+
+    <script>
+        function generateImages() {
+            var images = [
+                "https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/429981705_3237392223229867_8394472973206789466_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=3635dc&_nc_ohc=VFVi5ruHUAkAX-XQCcj&_nc_ht=scontent.fhan2-3.fna&oh=00_AfAdMMi8_K_SINngmnOYOrQKs0IrbmP_YCS7HJavhPLL8w&oe=65EB147F",
+                "https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/429998442_3237392276563195_8498519676112766650_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=3635dc&_nc_ohc=lL6T-8wpg2AAX8IYuij&_nc_ht=scontent.fhan2-4.fna&oh=00_AfA95dl2H7gZB4IOQZFentlioJJKeZHHRFPDCk4TJi_THg&oe=65E9F049",
+                "https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/429962766_3237392353229854_4544797309517808500_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3635dc&_nc_ohc=5hHPwDi2IaEAX_RuQhU&_nc_ht=scontent.fhan2-3.fna&oh=00_AfDMjQxAdzcuUt1aJtf1n5xF8AhHB_GjcwHkwkqisNikHA&oe=65E9BE2D",
+                "https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/430102817_3237392419896514_6073345604805123047_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=tGWJTviPLigAX8IcTea&_nc_ht=scontent.fhan2-3.fna&oh=00_AfDRiFcewKF0Qwii4K01SpoS-4VSVTA9sWlq-mTao5iGbg&oe=65E9FD61",
+                "https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/429962522_3237392466563176_7603916276876607317_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=3635dc&_nc_ohc=yR52n_jumDIAX9095BH&_nc_ht=scontent.fhan2-3.fna&oh=00_AfD0r-iG6MI_Ar4fUOdvOdhzlunhs6S9hcMMpDgyW_SHzw&oe=65EB8706",
+                "https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/430018342_3237392536563169_5316872323665346073_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=3635dc&_nc_ohc=z8uH4aQKmLAAX-5AyF_&_nc_ht=scontent.fhan2-3.fna&oh=00_AfDeq22wE2XedqAKB29hzJ687hMKpEVtNFAHt_oHB7iEyg&oe=65EA1976"
+            ];
+
+            var container = document.getElementById("image-container");
+            container.innerHTML = ''; // Clear previous images
+
+            for (var i = 0; i < 3; i++) {
+                var randomIndex = Math.floor(Math.random() * images.length);
+                var img = document.createElement("img");
+                img.src = images[randomIndex];
+                container.appendChild(img);
+            }
+        }
+    </script>
+</body>
+</html>
